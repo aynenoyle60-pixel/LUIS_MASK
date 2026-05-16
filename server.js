@@ -132,9 +132,20 @@ function masaBul(veri, masaId) {
   return veri.masalar.find((masa) => masa.id === String(masaId));
 }
 
-// Admin işlemleri için basit şifre kontrolü yapar.
-function adminMi(veri, istek) {
-  return istek.headers["x-admin-sifre"] === veri.adminSifresi;
+
+// Admin girişi istek fonksiyonu
+async function adminGirisiYap(sifre) {
+  // BURAYA KİMSENİN TAHMİN EDEMEYECEĞİ KENDİ YENİ ŞİFRENİ YAZ (Örn: 'LuisMask2026')
+  const BENIM_YENI_SIFREM = 'ruka3444_';
+
+  if (sifre !== BENIM_YENI_SIFREM) {
+    return false;
+  }
+
+  // Şifre doğruysa token oluşturup kaydet
+  durum.adminToken = 'luis-mask-token-xyz';
+  localStorage.setItem('adminToken', durum.adminToken);
+  return true;
 }
 
 // Türkçe metni URL ve id için güvenli hale getirir.

@@ -614,26 +614,39 @@ function kasaEkraniCiz() {
 }
 
 // Admin panelini çizer; kod bilmeden ürün ekleme/düzenleme buradan yapılır.
-function adminEkraniCiz() {
-  if (!durum.adminSifresi) {
-    iskeletiCiz(`
-      <section class="panel">
-        <div class="bolum-basligi">
+// Admin giriş ekranını çizer.
+function girisEkraniCiz() {
+  iskeletiCiz(`
+    <div class="giris-kapsayici" style="display: flex; justify-content: center; align-items: center; min-height: 80vh; padding: 20px;">
+      <section class="panel" style="width: 100%; max-width: 400px; padding: 30px; box-sizing: border-box;">
+        <div class="bolum-basligi" style="text-align: center; margin-bottom: 25px;">
           <div>
-            <h2>Admin Girişi</h2>
-            <p>Varsayılan şifre: 1234</p>
+            <h2 style="font-size: 24px; margin: 0 0 10px 0;">Luis Mask Admin Girişi</h2>
+            <p style="margin: 0; color: #666;">Yönetim paneline erişmek için şifrenizi giriniz.</p>
           </div>
         </div>
-        <form class="admin-formu" id="adminGirisFormu">
-          <input class="girdi" name="sifre" type="password" placeholder="Admin şifresi" required />
-          <button class="buton">Giriş Yap</button>
+        <form id="girisFormu" style="display: flex; flex-direction: column; gap: 15px;">
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label for="sifreInput" style="font-weight: bold; font-size: 14px;">Yönetici Şifresi</label>
+            <input class="girdi" type="password" id="sifreInput" placeholder="••••••••" required style="width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 8px;" />
+          </div>
+          <button class="buton tam" type="submit" style="width: 100%; background: #8b0000; color: white; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px;">Giriş Yap</button>
         </form>
       </section>
-    `);
-    document.querySelector("#adminGirisFormu").addEventListener("submit", adminGirisiYap);
-    return;
-  }
+    </div>
+  `);
 
+  document.querySelector("#girisFormu").addEventListener("submit", async (olay) => {
+    olay.preventDefault();
+    const sifre = document.querySelector("#sifreInput").value;
+    const basarili = await adminGirisiYap(sifre);
+    if (basarili) {
+      ekranaGit("siparisler");
+    } else {
+      alert("Hatalı şifre girdiniz!");
+    }
+  });
+}
   iskeletiCiz(`
     <section class="panel">
       <div class="bolum-basligi">
