@@ -1,0 +1,149 @@
+{
+  "adminSifresi": "1234",
+  "urunler": [
+    {
+      "id": "perde-arasi-latte",
+      "ad": "Perde Arası Latte",
+      "kategori": "Sahne Kahveleri",
+      "fiyat": 105,
+      "aktif": true,
+      "gorsel": "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "kirmizi-maske-mocha",
+      "ad": "Kırmızı Maske Mocha",
+      "kategori": "Sahne Kahveleri",
+      "fiyat": 125,
+      "aktif": true,
+      "gorsel": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "gulen-maske-brownie",
+      "ad": "Gülen Maske Brownie",
+      "kategori": "Maskeli Tatlılar",
+      "fiyat": 135,
+      "aktif": true,
+      "gorsel": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "aglayan-maske-cheesecake",
+      "ad": "Ağlayan Maske Cheesecake",
+      "kategori": "Maskeli Tatlılar",
+      "fiyat": 150,
+      "aktif": true,
+      "gorsel": "https://images.unsplash.com/photo-1767335911122-e996a8c3f06c?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "mini-sahne-pankek",
+      "ad": "Mini Sahne Pankek",
+      "kategori": "Çocuk Menüsü",
+      "fiyat": 115,
+      "aktif": true,
+      "gorsel": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "renkli-maske-limonata",
+      "ad": "Renkli Maske Limonata",
+      "kategori": "Çocuk Menüsü",
+      "fiyat": 85,
+      "aktif": true,
+      "gorsel": "https://images.unsplash.com/photo-1554040230-890ee5596bfa?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "gizli-tarif-tost",
+      "ad": "Gizli Tarif Tost",
+      "kategori": "Gizli Tarifler",
+      "fiyat": 125,
+      "aktif": true,
+      "gorsel": "https://images.unsplash.com/photo-1629212274717-59f76381b00b?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "luis-imza-cay",
+      "ad": "Luis İmza Çay",
+      "kategori": "Gizli Tarifler",
+      "fiyat": 45,
+      "aktif": true,
+      "gorsel": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=1200&q=80"
+    }
+  ],
+  "masalar": [
+    {
+      "id": "1",
+      "ad": "Masa 1",
+      "durum": "acik",
+      "siparisler": [],
+      "odemeler": []
+    },
+    {
+      "id": "2",
+      "ad": "Masa 2",
+      "durum": "acik",
+      "siparisler": [],
+      "odemeler": []
+    },
+    {
+      "id": "3",
+      "ad": "Masa 3",
+      "durum": "acik",
+      "siparisler": [],
+      "odemeler": []
+    },
+    {
+      "id": "4",
+      "ad": "Masa 4",
+      "durum": "acik",
+      "siparisler": [
+        {
+          "id": "45382d5c-2ebe-4ec7-8d1b-586abcc01564",
+          "durum": "yeni",
+          "olusturulma": "2026-05-15T16:33:30.908Z",
+          "kalemler": [
+            {
+              "id": "mini-sahne-pankek",
+              "ad": "Mini Sahne Pankek",
+              "fiyat": 115,
+              "adet": 1,
+              "not": ""
+            }
+          ]
+        },
+        {
+          "id": "342e8d07-b4fe-4428-b282-60c0a1ac9957",
+          "durum": "yeni",
+          "olusturulma": "2026-05-15T16:33:25.824Z",
+          "kalemler": [
+            {
+              "id": "perde-arasi-latte",
+              "ad": "Perde Arası Latte",
+              "fiyat": 105,
+              "adet": 1,
+              "not": "şekersiz"
+            }
+          ]
+        }
+      ],
+      "odemeler": []
+    },
+    {
+      "id": "5",
+      "ad": "Masa 5",
+      "durum": "acik",
+      "siparisler": [],
+      "odemeler": []
+    },
+    {
+      "id": "6",
+      "ad": "Masa 6",
+      "durum": "acik",
+      "siparisler": [],
+      "odemeler": []
+    },
+    {
+      "id": "7",
+      "ad": "Masa 7",
+      "durum": "acik",
+      "siparisler": [],
+      "odemeler": []
+    }
+  ]
+}

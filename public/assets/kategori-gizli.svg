@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Gizli tarifler kategorisi">
+  <rect width="240" height="240" rx="28" fill="#181d1a"/>
+  <path d="M64 136c28-56 74-84 138-84-14 64-58 102-132 116Z" fill="#c8a24a"/>
+  <path d="M72 168c36-40 72-68 122-102" fill="none" stroke="#fff4e6" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="72" cy="76" r="20" fill="#b32635"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="Luis imza çay">
+  <rect width="720" height="540" fill="#fff7e8"/>
+  <path d="M294 156h132l-28 222h-76Z" fill="#e18a38"/>
+  <path d="M316 186h88l-18 150h-52Z" fill="#8b3423"/>
+  <path d="M286 154h148" stroke="#c8a24a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M310 390h100" stroke="#c8a24a" stroke-width="16" stroke-linecap="round"/>
+  <path d="M430 228h34c34 0 54 24 48 54-6 34-38 52-78 42" fill="none" stroke="#e18a38" stroke-width="20" stroke-linecap="round"/>
+  <path d="M328 118c-16-18-2-36 14-56M382 118c-16-18-2-36 14-56" fill="none" stroke="#b32635" stroke-width="10" stroke-linecap="round"/>
+</svg>

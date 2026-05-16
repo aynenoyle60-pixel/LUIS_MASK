@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Gizli tarif maskesi">
+  <rect width="640" height="480" fill="#181d1a"/>
+  <path d="M140 155c78-72 282-72 360 0 20 100-42 190-180 190S120 255 140 155Z" fill="#242f29"/>
+  <path d="M206 220c40-24 78-24 116 0M318 220c40-24 78-24 116 0" fill="none" stroke="#c8a24a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M264 292h112" stroke="#c8a24a" stroke-width="14" stroke-linecap="round"/>
+  <path d="M155 142c90 36 240 36 330 0" fill="none" stroke="#f5efe6" stroke-width="12" stroke-linecap="round"/>
+</svg>

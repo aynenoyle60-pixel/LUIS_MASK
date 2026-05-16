@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="Cheesecake dilimi">
+  <rect width="720" height="540" fill="#f5ecdc"/>
+  <path d="M166 310 476 154l86 126-318 128Z" fill="#fff0c8"/>
+  <path d="M166 310v72l78 52v-26Z" fill="#d8a84f"/>
+  <path d="M244 408 562 280v72L244 434Z" fill="#c98745"/>
+  <path d="M222 294c88-20 180-58 276-116" fill="none" stroke="#b32635" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="492" cy="212" r="22" fill="#b32635"/>
+  <path d="M330 150c-20-22-4-44 16-68M392 128c-18-20-2-42 18-62" fill="none" stroke="#c8a24a" stroke-width="12" stroke-linecap="round"/>
+</svg>

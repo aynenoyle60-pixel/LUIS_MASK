@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Kırmızı maske">
+  <rect width="640" height="480" fill="#161111"/>
+  <path d="M130 142c92-62 288-62 380 0 10 118-44 215-190 215S120 260 130 142Z" fill="#b32635"/>
+  <path d="M205 222c42-34 80-34 120 0M315 222c42-34 80-34 120 0" fill="none" stroke="#fff4e6" stroke-width="20" stroke-linecap="round"/>
+  <path d="M268 302c34 18 70 18 104 0" fill="none" stroke="#fff4e6" stroke-width="16" stroke-linecap="round"/>
+  <path d="M320 118v178" stroke="#401316" stroke-width="10"/>
+</svg>

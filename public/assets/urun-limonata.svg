@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="Renkli limonata">
+  <rect width="720" height="540" fill="#eaf8f6"/>
+  <path d="M266 130h188l-28 300H294Z" fill="#f5d95c"/>
+  <path d="M292 202h136l-18 176H310Z" fill="#ffef8b"/>
+  <path d="M292 128h136" stroke="#1f8f8a" stroke-width="20" stroke-linecap="round"/>
+  <path d="M438 110 520 58" stroke="#b32635" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="504" cy="174" r="54" fill="#fff3c9" stroke="#c8a24a" stroke-width="12"/>
+  <path d="M468 174h72M504 138v72" stroke="#c8a24a" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="324" cy="258" r="14" fill="#1f8f8a"/>
+  <circle cx="384" cy="326" r="12" fill="#b32635"/>
+</svg>

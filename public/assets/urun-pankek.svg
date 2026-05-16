@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="Çocuk pankek tabağı">
+  <rect width="720" height="540" fill="#fff3c9"/>
+  <ellipse cx="360" cy="368" rx="238" ry="70" fill="#f7d86f"/>
+  <ellipse cx="360" cy="330" rx="178" ry="58" fill="#d79b45"/>
+  <ellipse cx="360" cy="288" rx="160" ry="54" fill="#efbd63"/>
+  <path d="M292 260c42-24 92-24 136 0" fill="none" stroke="#7a422c" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="310" cy="312" r="16" fill="#b32635"/>
+  <circle cx="410" cy="312" r="16" fill="#1f8f8a"/>
+  <path d="M336 346c18 14 48 14 66 0" fill="none" stroke="#7a422c" stroke-width="10" stroke-linecap="round"/>
+</svg>

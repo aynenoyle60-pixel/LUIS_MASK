@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="Mocha bardağı">
+  <rect width="720" height="540" fill="#211715"/>
+  <path d="M250 150h220l-34 270H284Z" fill="#fff1dd"/>
+  <path d="M278 210h164l-18 144H296Z" fill="#6e3d2f"/>
+  <path d="M286 138h148c20 0 36 16 36 36H250c0-20 16-36 36-36Z" fill="#c8a24a"/>
+  <path d="M312 252c34-20 62-20 96 0" fill="none" stroke="#f8efe1" stroke-width="14" stroke-linecap="round"/>
+  <path d="M334 108c-18-22-2-42 16-62M388 108c-18-22-2-42 16-62" fill="none" stroke="#b32635" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="520" cy="380" r="54" fill="#b32635"/>
+  <path d="M492 380c18-16 38-16 56 0" fill="none" stroke="#fff1dd" stroke-width="10" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="Tost tabağı">
+  <rect width="720" height="540" fill="#f8efe1"/>
+  <path d="M184 348c52-94 118-142 198-142s146 48 198 142H184Z" fill="#d69a48"/>
+  <path d="M230 330c40-58 92-88 152-88s112 30 152 88" fill="none" stroke="#fff1c6" stroke-width="22" stroke-linecap="round"/>
+  <path d="M260 350h244" stroke="#7a422c" stroke-width="14" stroke-linecap="round"/>
+  <path d="M310 222c-18-18-4-36 14-56M378 214c-18-18-4-36 14-56" fill="none" stroke="#b32635" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="540" cy="204" r="42" fill="#1f8f8a"/>
+  <path d="M516 204c16-14 32-14 48 0" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+</svg>

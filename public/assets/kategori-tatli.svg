@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Tatlı kategorisi">
+  <rect width="240" height="240" rx="28" fill="#fff0df"/>
+  <path d="M46 142 148 78l48 58-112 58Z" fill="#fff0c8"/>
+  <path d="M46 142v40l38 28v-16Z" fill="#d8a84f"/>
+  <path d="M84 194 196 136v38L84 210Z" fill="#c98745"/>
+  <circle cx="168" cy="104" r="16" fill="#b32635"/>
+</svg>

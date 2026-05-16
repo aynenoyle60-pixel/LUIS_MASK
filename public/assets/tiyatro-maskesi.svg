@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Tiyatro maskeleri">
+  <rect width="640" height="480" fill="#241b22"/>
+  <circle cx="220" cy="235" r="132" fill="#f7efe2"/>
+  <circle cx="420" cy="235" r="132" fill="#e6d3bd"/>
+  <path d="M160 214c34-28 76-28 112 0M368 214c34 28 76 28 112 0" fill="none" stroke="#151312" stroke-width="18" stroke-linecap="round"/>
+  <path d="M170 280c34 38 72 38 104 0M372 294c34-34 72-34 104 0" fill="none" stroke="#151312" stroke-width="16" stroke-linecap="round"/>
+  <path d="M92 112c88-50 368-54 456 0" fill="none" stroke="#c8a24a" stroke-width="18" stroke-linecap="round"/>
+</svg>

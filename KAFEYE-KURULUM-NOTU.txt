@@ -1,0 +1,28 @@
+LUIS MASK QR SIPARIS SISTEMI - KAFEYE KURULUM
+
+1) Bu klasorun tamamini ana kasa bilgisayarina kopyalayin.
+
+2) Ana bilgisayarda Node.js yoksa kurun:
+   https://nodejs.org/
+
+3) Klasorun icindeki BASLAT.bat dosyasina cift tiklayin.
+
+4) Kasa ekrani:
+   http://localhost:3000/?view=cashier
+
+5) Admin paneli:
+   http://localhost:3000/?view=admin
+
+6) QR masalar:
+   http://localhost:3000/?view=qr
+
+7) Telefonlarin QR ile acabilmesi icin:
+   - Telefon ve ana bilgisayar ayni Wi-Fi aginda olmali.
+   - QR sayfasinda yazan ag adresi kullanilmali.
+   - Windows guvenlik duvari gerekirse Node.js icin izin istemeli.
+
+8) Masa ekleme/silme:
+   Admin paneli > Masa Yonetimi
+
+9) Sonradan degisiklik:
+   Bu klasoru Codex ile acip istediginiz yeniligi yazabilirsiniz.

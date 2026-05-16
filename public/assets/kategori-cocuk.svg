@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Çocuk menüsü kategorisi">
+  <rect width="240" height="240" rx="28" fill="#fff3c9"/>
+  <ellipse cx="120" cy="152" rx="82" ry="28" fill="#f7d86f"/>
+  <ellipse cx="120" cy="126" rx="66" ry="24" fill="#efbd63"/>
+  <circle cx="88" cy="126" r="10" fill="#b32635"/>
+  <circle cx="152" cy="126" r="10" fill="#1f8f8a"/>
+  <path d="M102 148c12 10 26 10 38 0" fill="none" stroke="#7a422c" stroke-width="8" stroke-linecap="round"/>
+</svg>

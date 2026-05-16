@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Çocuk menüsü maskesi">
+  <rect width="640" height="480" fill="#fff3c9"/>
+  <path d="M135 150c95-70 275-70 370 0 18 105-44 206-185 206S117 255 135 150Z" fill="#ff7fb0"/>
+  <circle cx="235" cy="226" r="38" fill="#2c1b2e"/>
+  <circle cx="405" cy="226" r="38" fill="#2c1b2e"/>
+  <path d="M260 292c40 28 80 28 120 0" fill="none" stroke="#2c1b2e" stroke-width="16" stroke-linecap="round"/>
+  <path d="M155 142 104 86M485 142l51-56" stroke="#39a6a3" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="104" cy="86" r="26" fill="#39a6a3"/>
+  <circle cx="536" cy="86" r="26" fill="#39a6a3"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="Latte fincanı">
+  <rect width="720" height="540" fill="#f8efe1"/>
+  <circle cx="360" cy="286" r="176" fill="#d7b58d"/>
+  <circle cx="360" cy="286" r="132" fill="#f7ead9"/>
+  <path d="M262 278c50-48 146-48 196 0-34 42-162 42-196 0Z" fill="#8a5237"/>
+  <path d="M292 236c-24-28-4-56 22-86M360 226c-28-30-6-58 22-92M424 236c-24-28-4-56 22-86" fill="none" stroke="#b32635" stroke-width="14" stroke-linecap="round"/>
+  <path d="M512 252h48c34 0 58 24 58 56s-24 58-58 58h-48" fill="none" stroke="#d7b58d" stroke-width="34" stroke-linecap="round"/>
+  <path d="M210 466h300" stroke="#c8a24a" stroke-width="18" stroke-linecap="round"/>
+</svg>
