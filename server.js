@@ -447,6 +447,6 @@ const sunucu = http.createServer((istek, cevap) => {
 });
 
 // Sunucuyu belirtilen portta çalıştırır ve terminale ön izleme adresini yazar.
-sunucu.listen(PORT, () => {
-  console.log(`Kafe QR uygulaması hazır: http://localhost:${PORT}`);
+sunucu.listen(PORT, '0.0.0.0', () => {
+    console.log(`Luis Mask Sunucusu ${PORT} portunda başarıyla internete açıldı!`);
 });
