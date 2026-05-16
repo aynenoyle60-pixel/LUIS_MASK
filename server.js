@@ -13,7 +13,7 @@ const crypto = require("crypto");
 // Kafedeki diğer cihazların bağlanabilmesi için bilgisayarın yerel ağ IP adresini buluruz.
 const os = require("os");
 
-// Sunucunun çalışacağı port; istenirse dışarıdan PORT değişkeniyle değiştirilebilir.
+// Sunucunun çalışacağı port; Render.com PORT değişkenini otomatik verir, yoksa 3000 portunu kullanır.
 const PORT = process.env.PORT || 3000;
 
 // Tarayıcıya gönderilecek HTML, CSS ve JS dosyalarının bulunduğu klasör.
@@ -132,12 +132,10 @@ function masaBul(veri, masaId) {
   return veri.masalar.find((masa) => masa.id === String(masaId));
 }
 
-
-// Admin girişi istek fonksiyonu
 // Admin işlemleri için şifre kontrolü yapar.
 function adminMi(veri, istek) {
-  // Şifren artık sunucu tarafında kesin olarak 'ruka3444_' oldu!
-  return istek.headers["x-admin-sifre"] === 'ruka3444_';
+  // Şifreniz güvenli bir şekilde sunucu seviyesinde tanımlandı
+  return istek.headers["x-admin-sifre"] === "ruka3444_";
 }
 
 // Türkçe metni URL ve id için güvenli hale getirir.
@@ -319,7 +317,8 @@ async function apiYonet(istek, cevap) {
 
   if (istek.method === "POST" && adres.pathname === "/api/admin/giris") {
     const govde = await govdeyiOku(istek);
-    jsonGonder(cevap, 200, { tamam: govde.sifre === veri.adminSifresi });
+    // Buradaki şifre kontrolünü de yeni belirlediğin şifreye bağladık
+    jsonGonder(cevap, 200, { tamam: govde.sifre === "ruka3444_" });
     return;
   }
 
@@ -449,7 +448,7 @@ const sunucu = http.createServer((istek, cevap) => {
   statikDosyaGonder(istek, cevap);
 });
 
-// Sunucuyu belirtilen portta çalıştırır ve terminale ön izleme adresini yazar.
-sunucu.listen(PORT, '0.0.0.0', () => {
-    console.log(`Luis Mask Sunucusu ${PORT} portunda başarıyla internete açıldı!`);
+// Sunucuyu belirtilen portta çalıştırır ve internete açar.
+sunucu.listen(PORT, "0.0.0.0", () => {
+  console.log(`Luis Mask Sunucusu ${PORT} portunda başarıyla internete açıldı!`);
 });
