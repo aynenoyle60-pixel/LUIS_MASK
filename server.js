@@ -134,18 +134,10 @@ function masaBul(veri, masaId) {
 
 
 // Admin girişi istek fonksiyonu
-async function adminGirisiYap(sifre) {
-  // BURAYA KİMSENİN TAHMİN EDEMEYECEĞİ KENDİ YENİ ŞİFRENİ YAZ (Örn: 'LuisMask2026')
-  const BENIM_YENI_SIFREM = 'ruka3444_';
-
-  if (sifre !== BENIM_YENI_SIFREM) {
-    return false;
-  }
-
-  // Şifre doğruysa token oluşturup kaydet
-  durum.adminToken = 'luis-mask-token-xyz';
-  localStorage.setItem('adminToken', durum.adminToken);
-  return true;
+// Admin işlemleri için şifre kontrolü yapar.
+function adminMi(veri, istek) {
+  // Şifren artık sunucu tarafında kesin olarak 'ruka3444_' oldu!
+  return istek.headers["x-admin-sifre"] === 'ruka3444_';
 }
 
 // Türkçe metni URL ve id için güvenli hale getirir.
