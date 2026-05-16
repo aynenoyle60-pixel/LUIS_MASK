@@ -9,7 +9,8 @@ const durum = {
   kategori: "Tümü",
   sepet: {},
   veri: { sunucuAdresi: "", urunler: [], masalar: [] },
-  adminSifresi: localStorage.getItem("adminSifresi") || ""
+  adminSifresi: localStorage.getItem("adminSifresi") || "",
+  SepetAcik:false // yeni: sepetin açık olma durumunu kontrol eder.
 };
 
 // Sipariş durumlarını kullanıcıya Türkçe ve okunabilir göstermek için sözlük kullanıyoruz.
@@ -323,6 +324,9 @@ function menuEkraniCiz() {
   const gosterilecekUrunler =
     durum.kategori === "Tümü" ? aktifUrunler : aktifUrunler.filter((urun) => urun.kategori === durum.kategori);
 
+  // Toplam seçilen ürün adetini hesapla
+  const toplamUrunAdeti = sepetKalemleri().reduce((toplam, kalem) => toplam + kalem.adet, 0);
+
   iskeletiCiz(`
     <section class="musteri-kahraman">
       <div class="kahraman-yazi">
@@ -342,6 +346,7 @@ function menuEkraniCiz() {
         </button>
       `).join("")}
     </div>
+    
     <div class="izgara menu-duzeni">
       <section class="panel">
         <div class="bolum-basligi">
@@ -374,37 +379,49 @@ function menuEkraniCiz() {
           `).join("")}
         </div>
       </section>
-      <aside class="panel sepet-paneli">
-        <div class="bolum-basligi">
-          <div>
-            <h3>Sipariş Listesi</h3>
-            <p>${sepetKalemleri().length ? `${sepetKalemleri().length} ürün seçildi` : "Liste henüz boş"}</p>
-          </div>
-        </div>
-        <div class="liste">
-          ${sepetKalemleri().length ? sepetKalemleri().map((kalem) => `
-            <div class="sepet-kalemi">
-              <div class="satir">
-                <div>
-                  <strong>${kalem.ad}</strong>
-                  <div class="yardimci-yazi">${para.format(kalem.fiyat)} x ${kalem.adet}</div>
-                </div>
-                <div class="adet-kutusu">
-                  <button class="kucuk-buton" data-azalt="${kalem.id}">-</button>
-                  <strong>${kalem.adet}</strong>
-                  <button class="kucuk-buton" data-artir="${kalem.id}">+</button>
-                </div>
-              </div>
-              <textarea class="not-alani" data-not="${kalem.id}" placeholder="Not: şekersiz, az buzlu...">${kalem.not || ""}</textarea>
+
+      <div class="sepet-arka-plan" id="sepetModal" style="display: ${durum.sepetAcik ? 'flex' : 'none'}; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); z-index: 999; justify-content: center; align-items: center; padding: 15px; box-sizing: border-box;">
+        <aside class="panel sepet-paneli" style="width: 100%; max-width: 500px; max-height: 85vh; overflow-y: auto; background: #fff; border-radius: 12px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; position: relative;">
+          
+          <button id="sepetiKapatBtn" style="position: absolute; top: 15px; right: 15px; background: #eee; border: none; font-size: 18px; font-weight: bold; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button>
+
+          <div class="bolum-basligi">
+            <div>
+              <h3>Sipariş Listesi</h3>
+              <p>${sepetKalemleri().length ? `${sepetKalemleri().length} ürün seçildi` : "Liste henüz boş"}</p>
             </div>
-          `).join("") : `<div class="bos">Menüden ürün ekleyin.</div>`}
-        </div>
-        <div class="toplamlar">
-          <div class="toplam-satiri"><span>Ara toplam</span><strong>${para.format(sepetToplami())}</strong></div>
-          <button class="buton tam" id="siparisGonder" ${sepetKalemleri().length ? "" : "disabled"}>Siparişi Gönder</button>
-        </div>
-      </aside>
+          </div>
+          <div class="liste" style="flex: 1; overflow-y: auto; margin-bottom: 15px;">
+            ${sepetKalemleri().length ? sepetKalemleri().map((kalem) => `
+              <div class="sepet-kalemi" style="border-bottom: 1px solid #eee; padding: 10px 0;">
+                <div class="satir">
+                  <div>
+                    <strong>${kalem.ad}</strong>
+                    <div class="yardimci-yazi">${para.format(kalem.fiyat)} x ${kalem.adet}</div>
+                  </div>
+                  <div class="adet-kutusu">
+                    <button class="kucuk-buton" data-azalt="${kalem.id}">-</button>
+                    <strong>${kalem.adet}</strong>
+                    <button class="kucuk-buton" data-artir="${kalem.id}">+</button>
+                  </div>
+                </div>
+                <textarea class="not-alani" data-not="${kalem.id}" placeholder="Not: şekersiz, az buzlu..." style="width:100%; margin-top:8px;">${kalem.not || ""}</textarea>
+              </div>
+            `).join("") : `<div class="bos" style="text-align:center; padding: 20px;">Menüden ürün ekleyin.</div>`}
+          </div>
+          <div class="toplamlar" style="margin-top: auto;">
+            <div class="toplam-satiri" style="display:flex; justify-content:space-between; margin-bottom:15px;"><span>Ara toplam</span><strong>${para.format(sepetToplami())}</strong></div>
+            <button class="buton tam" id="siparisGonder" ${sepetKalemleri().length ? "" : "disabled"} style="width:100%;">Siparişi Gönder</button>
+          </div>
+        </aside>
+      </div>
     </div>
+
+    ${toplamUrunAdeti > 0 ? `
+      <button id="sepetiAcBtn" style="position: fixed; bottom: 25px; right: 25px; background: #8b0000; color: white; border: none; padding: 15px 25px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 998; cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 16px;">
+        🛒 Sepetim <span style="background: white; color: #8b0000; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px;">${toplamUrunAdeti}</span>
+      </button>
+    ` : ""}
   `);
 
   document.querySelector("#masaSecimi").addEventListener("change", (olay) => {
@@ -415,6 +432,7 @@ function menuEkraniCiz() {
 
   document.querySelectorAll("[data-kategori]").forEach((buton) => {
     buton.addEventListener("click", () => {
+      durum.kategori = $.dataset.kategori; // Orijinal koddaki seçim yapısını koruyoruz
       durum.kategori = buton.dataset.kategori;
       ekraniCiz();
     });
@@ -438,9 +456,31 @@ function menuEkraniCiz() {
     alan.addEventListener("input", () => urunNotuYaz(alan.dataset.not, alan.value));
   });
 
-  document.querySelector("#siparisGonder").addEventListener("click", siparisGonder);
-}
+  // YENİ: Sabit sepet butonuna basınca sepet penceresini aç
+  document.querySelector("#sepetiAcBtn")?.addEventListener("click", () => {
+    durum.sepetAcik = true;
+    ekraniCiz();
+  });
 
+  // YENİ: Kapatma (X) butonuna basınca sepet penceresini gizle
+  document.querySelector("#sepetiKapatBtn")?.addEventListener("click", () => {
+    durum.sepetAcik = false;
+    ekraniCiz();
+  });
+
+  // YENİ: Arka plana tıklayınca da sepet kapansın
+  document.querySelector("#sepetModal")?.addEventListener("click", (olay) => {
+    if (olay.target.id === "sepetModal") {
+      durum.sepetAcik = false;
+      ekraniCiz();
+    }
+  });
+
+  document.querySelector("#siparisGonder").addEventListener("click", async () => {
+    durum.sepetAcik = false; // Sipariş verilince ekran kapansın
+    await siparisGonder();
+  });
+}
 // Kasa ekranını çizer; sipariş ve ödeme işlemleri buradan yönetilir.
 function kasaEkraniCiz() {
   const seciliMasa = durum.veri.masalar.find((masa) => masa.id === durum.kasaMasaId) || durum.veri.masalar[0];
