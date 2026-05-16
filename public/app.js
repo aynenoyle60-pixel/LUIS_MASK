@@ -614,7 +614,25 @@ function kasaEkraniCiz() {
 }
 
 // Admin panelini çizer; kod bilmeden ürün ekleme/düzenleme buradan yapılır.
-
+function adminEkraniCiz() {
+  if (!durum.adminSifresi) {
+    iskeletiCiz(`
+      <section class="panel">
+        <div class="bolum-basligi">
+          <div>
+            <h2>Admin Girişi</h2>
+            <p>Varsayılan şifre: 1234</p>
+          </div>
+        </div>
+        <form class="admin-formu" id="adminGirisFormu">
+          <input class="girdi" name="sifre" type="password" placeholder="Admin şifresi" required />
+          <button class="buton">Giriş Yap</button>
+        </form>
+      </section>
+    `);
+    document.querySelector("#adminGirisFormu").addEventListener("submit", adminGirisiYap);
+    return;
+  }
 
   iskeletiCiz(`
     <section class="panel">
